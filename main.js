@@ -19,7 +19,6 @@ function fibsRec(n) {
   }
 }
 
-
 /*
 
 */
@@ -27,13 +26,8 @@ function mergeSort(arr) {
   if (arr.length <= 1) {
     return arr;
   }
-  
   const left = mergeSort(arr.slice(0, Math.floor(arr.length / 2)));
-  console.log('left:')
-  console.log(left);
   const right = mergeSort(arr.slice(Math.floor(arr.length / 2)));
-  console.log('right:');
-  console.log(right);
   const sorted = [];
   let i = 0,
     j = 0;
