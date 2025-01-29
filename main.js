@@ -19,9 +19,6 @@ function fibsRec(n) {
   }
 }
 
-/*
-
-*/
 function mergeSort(arr) {
   if (arr.length <= 1) {
     return arr;
@@ -57,7 +54,8 @@ function binarySearch(n, arr) {
     }
   }
 }
-if (binarySearch(8,[1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) {
+
+if (binarySearch(8, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) {
   console.log("value found");
 } else {
   console.log("value not found");
