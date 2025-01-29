@@ -43,4 +43,22 @@ function mergeSort(arr) {
   return sorted.concat(left.slice(i), right.slice(j));
 }
 
-console.log(mergeSort([676, 10, 937, 105, 181]));
+function binarySearch(n, arr) {
+  if (arr.length == 0) {
+    return false;
+  } else {
+    const midpoint = Math.floor(arr.length / 2);
+    if (n == arr[midpoint]) {
+      return true;
+    } else if (n < arr[midpoint]) {
+      return binarySearch(n, arr.slice(0, midpoint));
+    } else {
+      return binarySearch(n, arr.slice(midpoint + 1));
+    }
+  }
+}
+if (binarySearch(8,[1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) {
+  console.log("value found");
+} else {
+  console.log("value not found");
+}
